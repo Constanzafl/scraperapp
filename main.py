@@ -1,6 +1,14 @@
 import streamlit as st
+from scrape import (
+    scrape_website,
+    extract_body_content,
+    clean_body_content,
+    split_dom_content,
+)
+from parse import parse_with_ollama
 
-st.title("AI web scraper con llms")
+
+st.title("AI web scraper witch llms")
 url=st.text_input("Enter the URL:")
 
 if st.button("Srape Site"):
